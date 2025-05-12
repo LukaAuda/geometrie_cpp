@@ -22,9 +22,9 @@ void Circle::draw(){
     double pas_angle = 2 * pi / nb_points; 
 
     for (int i = 0; i < nb_points; ++i) {
-        double angle = i * pas_angle;
-        double x = center.x + radius * cos(angle); 
-        double y = center.y + radius * sin(angle); 
+        double angle = i*pas_angle;
+        double x = center.x+radius*cos(angle); 
+        double y = center.y+radius*sin(angle); 
 
 
         std::cout << "coordonnées du cercle : (" << x << ", " << y << ")" << std::endl;
@@ -34,14 +34,17 @@ void Circle::draw(){
 }
 
 void Circle::translate(Point T){
-    center.x += T.x;
-    center.y += T.y;
+    center.x +=T.x;
+    center.y +=T.y;
 }
 
 void Circle::resize(double ratio){
-    radius *= ratio;
+    radius *=ratio;
 }
 
 bool Circle::equals(Circle circle){
-    return radius == circle.radius && center.x == circle.center.x && center.y == circle.center.y;
+    if (radius == circle.radius && center.x == circle.center.x && center.y == circle.center.y){
+        return true;
+    }
+    return false;
 }
