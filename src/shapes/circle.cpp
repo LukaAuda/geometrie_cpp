@@ -17,17 +17,19 @@ double Circle::area(){
 }
 
 void Circle::draw(){
-
     const int nb_points = 1000;
     double pas_angle = 2 * pi / nb_points; 
 
+    vector<Point> points;
+   
     for (int i = 0; i < nb_points; ++i) {
-        double angle = i*pas_angle;
-        double x = center.x+radius*cos(angle); 
-        double y = center.y+radius*sin(angle); 
+        double angle = i * pas_angle;
+        double x = center.x + radius * cos(angle); 
+        double y = center.y + radius * sin(angle); 
+        points.push_back(Point(x, y));
+    }
 
-
-        std::cout << "coordonnées du cercle : (" << x << ", " << y << ")" << std::endl;
+    draw_picture(points);
     }
 }
 
