@@ -3,7 +3,7 @@
 #include <cassert>
 #include "point.hpp"
 #include "shapes/triangle.hpp"
-#include "draw.hpp"
+
 
 using namespace std;
 

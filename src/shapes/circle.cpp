@@ -43,5 +43,8 @@ void Circle::resize(double ratio){
 }
 
 bool Circle::equals(Circle circle){
-    return radius == circle.radius && center.x == circle.center.x && center.y == circle.center.y;
+    if (radius == circle.radius && center.x == circle.center.x && center.y == circle.center.y){
+        return true;
+    }
+    return false;
 }
