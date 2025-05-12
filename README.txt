@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-est ce que ça marhce ? 
-=======
 PROJET C++ : GÉOMÉTRIE
 
 Chef de projet :
@@ -54,4 +51,4 @@ OBJECTIFS TECHNIQUES
 - Utilisation de fonctions pour les calculs mathématiques.
 - Apprentissage du versionnage avec Git et GitHub.
 - Collaboration en équipe avec des branches (optionnel).
->>>>>>> 0ef62e8de65e42d0e984e8ababd05d1541e58a80
+
