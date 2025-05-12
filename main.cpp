@@ -20,18 +20,19 @@ int main() {
         Point(0, 100),
         Point(0, 0)
     };
+    
      //Partie 1 : Tests sur le cercle 
-     // Création d’un cercle de rayon 5 centré en (0, 0)
+     // Création d’un cercle 
      Point center(0, 0);
      Circle c(5.0, center);
  
-     // Test de la méthode 'circumference'
+     // Test circonference
      double circumference = c.circumference();
      double expectedCircumference = 2 * pi * 5.0;
      assert(fabs(circumference - expectedCircumference) < 1e-6);
      cout << "Test 'circumference' réussi!" << endl;
  
-     // Test de la méthode 'area'
+     // Test aire
      double area = c.area();
      double expectedArea = pi * 25.0; // π * r²
      assert(fabs(area - expectedArea) < 1e-6);
