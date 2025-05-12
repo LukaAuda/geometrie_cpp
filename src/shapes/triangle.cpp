@@ -78,3 +78,18 @@ void Triangle:: rotate(double angle){
 
     translate(M);
 }
+
+bool Triangle:: equals(Triangle triangle){
+    Point M = center();
+    Point moinsM = Point(-M.x, -M.y);
+    translate(moinsM);
+
+    Point N = triangle.center();
+    Point moinsN = Point(-N.x, -N.y);
+    triangle.translate(moinsN);
+    if(round(triangle.A.x*100) == round(A.x*100) and round(triangle.B.x*100) == round(B.x*100) and round(triangle.C.x*100) == round(C.x*100)){
+        return true;
+    }
+    return false;
+
+}

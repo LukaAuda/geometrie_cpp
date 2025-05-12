@@ -51,3 +51,4 @@ OBJECTIFS TECHNIQUES
 - Utilisation de fonctions pour les calculs mathématiques.
 - Apprentissage du versionnage avec Git et GitHub.
 - Collaboration en équipe avec des branches (optionnel).
+
