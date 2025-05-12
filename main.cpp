@@ -1,6 +1,8 @@
 #include "include/draw.hpp"
 #include "include/point.hpp"
 #include "include/shapes/triangle.hpp"
+#include "include/shapes/square.hpp"
+#include "include/shapes/circle.hpp"
 #include <iostream>
 #include <cmath>
 #include <cassert>
@@ -76,22 +78,22 @@ int main() {
     cout << "Test 'perimeter' réussi!" << endl;
 
     // Test de la méthode 'area'
-    double area = s.area();
-    double expectedArea = expectedSide * expectedSide;
-    assert(fabs(area - 4.0) < 1e-6);
-    cout << "Test 'area' réussi!" << endl;
+    double area2 = s.area();
+    double expectedArea2 = expectedSide * expectedSide;
+    assert(fabs(area2 - 4.0) < 1e-6);
+    cout << "Test 'area2' réussi!" << endl;
 
     // Test de la méthode 'center'
-    Point center = s.center();
-    assert(fabs(center.x - 1.0) < 1e-6 && fabs(center.y - 1.0) < 1e-6);
-    cout << "Test 'center' réussi!" << endl;
+    Point center2 = s.center();
+    assert(fabs(center2.x - 1.0) < 1e-6 && fabs(center2.y - 1.0) < 1e-6);
+    cout << "Test 'center2' réussi!" << endl;
 
     // Test de la méthode 'translate'
-    Point translation(1, -1);
-    s.translate(translation);
+    Point translation2(1, -1);
+    s.translate(translation2);
     assert(fabs(s.A.x - 1.0) < 1e-6 && fabs(s.A.y - -1.0) < 1e-6);
     assert(fabs(s.C.x - 3.0) < 1e-6 && fabs(s.C.y - 1.0) < 1e-6);
-    cout << "Test 'translate' réussi!" << endl;
+    cout << "Test 'translate2' réussi!" << endl;
 
     // Test de la méthode 'resize'
     s.resize(0.5);  // réduction à 50%
@@ -134,34 +136,34 @@ int main() {
     Triangle t(P, Q, R);
 
     // Test de la méthode 'perimeter'
-    double perimeter = t.perimeter();
-    double expectedPerimeter = 12.0;  // Périmètre attendu : 3 + 4 + 5
-    assert(fabs(perimeter - expectedPerimeter) < 1e-6);
-    cout << "Test 'perimeter' réussi!" << endl;
+    double perimeter3 = t.perimeter();
+    double expectedPerimeter3 = 12.0;  // Périmètre attendu : 3 + 4 + 5
+    assert(fabs(perimeter3 - expectedPerimeter3) < 1e-6);
+    cout << "Test 'perimeter3' réussi!" << endl;
 
     // Test de la méthode 'area'
-    double area = t.area();
-    double expectedArea = 6.0;  // Aire attendue : (0.5 * base * hauteur) = (0.5 * 3 * 4)
-    assert(fabs(area - expectedArea) < 1e-6);
-    cout << "Test 'area' réussi!" << endl;
+    double area3 = t.area();
+    double expectedArea3 = 6.0;  // Aire attendue : (0.5 * base * hauteur) = (0.5 * 3 * 4)
+    assert(fabs(area3 - expectedArea3) < 1e-6);
+    cout << "Test 'area3' réussi!" << endl;
 
     // Test de la méthode 'center'
-    Point center = t.center();
+    Point center3 = t.center();
     Point expectedCenter(1.0, 1.333333);  // Centre attendu : (1,1.33)
     assert(fabs(center.x - expectedCenter.x) < 1e-6 && fabs(center.y - expectedCenter.y) < 1e-6);
-    cout << "Test 'center' réussi!" << endl;
+    cout << "Test 'center3' réussi!" << endl;
 
     // Test de la méthode 'translate'
-    Point translation(2, 3);
-    t.translate(translation);
+    Point translation3(2, 3);
+    t.translate(translation3);
     assert(fabs(t.A.x - 2) < 1e-6 && fabs(t.A.y - 3) < 1e-6);
     assert(fabs(t.B.x - 5) < 1e-6 && fabs(t.B.y - 3) < 1e-6);
     assert(fabs(t.C.x - 2) < 1e-6 && fabs(t.C.y - 7) < 1e-6);
     cout << "Test 'translate' réussi!" << endl;
 
     // Test de la méthode 'resize'
-    double ratio = 0.5;
-    t.resize(ratio);
+    double ratio3 = 0.5;
+    t.resize(ratio3);
     assert(fabs(t.A.x - 1) < 1e-6 && fabs(t.A.y - 1.5) < 1e-6);
     assert(fabs(t.B.x - 3) < 1e-6 && fabs(t.B.y - 1.5) < 1e-6);
     assert(fabs(t.C.x - 1) < 1e-6 && fabs(t.C.y - 4.0) < 1e-6);
