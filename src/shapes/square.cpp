@@ -101,3 +101,4 @@ Circle Square::circumscribedCircle() {
     double rayon = std::sqrt(dx*dx + dy*dy);
     return Circle(rayon, O);
 }
+
