@@ -13,9 +13,9 @@ using namespace std;
 Square::Square(Point P, Point R) : A(P), C(R) {};
 
 double Square::side(){
-    double dx = C.x - A.x;
-    double dy = C.y - A.y;
-    double diagonal = std::sqrt(dx*dx + dy*dy);
+    double x = C.x - A.x;
+    double y = C.y - A.y;
+    double diagonal = std::sqrt(x*x + y*y);
     return diagonal / std::sqrt(2) ;
 
 }
@@ -96,9 +96,9 @@ Circle Square::inscribedCircle(){
 
 Circle Square::circumscribedCircle() {
     Point O = center();
-    double dx = C.x - O.x;
-    double dy = C.y - O.y;
-    double rayon = std::sqrt(dx*dx + dy*dy);
+    double x = C.x - O.x;
+    double y = C.y - O.y;
+    double rayon = std::sqrt(x*x + y*y);
     return Circle(rayon, O);
 }
 
