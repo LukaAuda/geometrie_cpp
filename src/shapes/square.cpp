@@ -40,11 +40,17 @@ Point Square::center(){
 }
 
 void Square::draw(){
+    Point O = center();
+    double x = O.x - C.x;
+    double y = O.y - C.y;
+    Point B (O.x + y ,O.y - x) ;
+    Point D (O.x - y,O.y + x);
+
     vector<Point> points = {
 		Point(A.x, A.y),
-		Point(C.x, A.y),
+		Point(B.x, B.y),
 		Point(C.x, C.y),
-		Point(A.x, C.y),
+		Point(D.x, D.y),
 		Point(A.x, A.y)
 
 	};
