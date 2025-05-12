@@ -1,32 +1,53 @@
-projet-cpp-geometrie
---- PROJET C++ GEOMETRIE ---
+PROJET C++ : GÉOMÉTRIE
 
-chef de projet : Luka
+Chef de projet :
+- Luka
 
-collaborateurs :
+Collaborateurs :
+- Cercle : Kenza
+- Triangle : Baptiste
+- Carré : Benjamin
 
-Cercle : Kenza
-Triangle : Baptiste
-Carre : Benjamin
+------------------------------------------------------------
 
---- DESCRIPTION DU PROJET ---
-Réaliser des fonctions en travaillant en collaboration sur différents fichiers pour dessiner et faire des calculs de distance, aire, périmètre ... avec le cercle, le triangle et le carré.
+DESCRIPTION DU PROJET
 
+Ce projet a pour objectif de créer un programme en C++ permettant de représenter et manipuler des formes géométriques simples (cercle, triangle, carré).
 
---- LIGNES DE COMMANDE ---
+Chaque forme est développée dans un fichier séparé avec ses propres fonctions : dessin, calcul d'aire, périmètre, distances, etc.
 
-Pour commencer à modifier les fichiers en mode local il faut faire un clone : 
-git clone lien_github  
+Le projet est structuré pour permettre un travail en collaboration avec Git.
 
-git --version : afficher la version actuelle de Git installée
+------------------------------------------------------------
 
-git status : vérifie si un dossier est bien suivi
+COMMANDES GIT UTILES
 
-echo "phrase" > README.txt : crée un fichier README.txt 
+Cloner le dépôt pour travailler en local :
+git clone <lien_github>
 
-git add nom_fichier : ajoute ce fichier à Git
+Vérifier la version de Git :
+git --version
 
-git commit -m "message_obligatoire" : créer un commit pour enregistrer les changements fait sur un ou plusieurs fichiers
+Vérifier l'état du dépôt local :
+git status
 
-git push : transmet les changements à github
+Créer un fichier README.txt (exemple) :
+echo "phrase" > README.txt
 
+Ajouter un fichier suivi par Git :
+git add nom_fichier
+
+Créer un commit pour enregistrer les changements :
+git commit -m "message_obligatoire"
+
+Envoyer les modifications sur GitHub :
+git push
+
+------------------------------------------------------------
+
+OBJECTIFS TECHNIQUES
+
+- Bonne organisation du code en plusieurs fichiers (un par forme).
+- Utilisation de fonctions pour les calculs mathématiques.
+- Apprentissage du versionnage avec Git et GitHub.
+- Collaboration en équipe avec des branches (optionnel).
