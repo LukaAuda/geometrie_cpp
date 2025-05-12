@@ -49,4 +49,3 @@ bool Circle::equals(Circle circle){
         return true;
     }
     return false;
-
