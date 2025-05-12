@@ -43,8 +43,8 @@ void Square::draw(){
     Point O = center();
     double x = O.x - C.x;
     double y = O.y - C.y;
-    Point B (O.x + x ,O.y - y) ;
-    Point D (O.x - x,O.y + y);
+    Point B (O.x + y ,O.y - x) ;
+    Point D (O.x - y,O.y + x);
 
     vector<Point> points = {
 		Point(A.x, A.y),
