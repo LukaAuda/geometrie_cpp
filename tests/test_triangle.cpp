@@ -1,28 +1,13 @@
-#include "include/draw.hpp"
-#include "include/point.hpp"
-#include "include/shapes/triangle.hpp"
 #include <iostream>
 #include <cmath>
 #include <cassert>
-#include <vector>
+#include "point.hpp"
+#include "shapes/triangle.hpp"
+#include "draw.hpp"
 
 using namespace std;
 
 int main() {
-    // Partie 1 : Affichage avec les points
-    // Définir des points dans un vecteur
-    vector<Point> points = {
-        Point(0, 0),
-        Point(100, 0),
-        Point(100, 100),
-        Point(0, 100),
-        Point(0, 0)
-    };
-    
-    // Dessiner l'image en connectant les points
-    draw_picture(points);
-
-    // Partie 2 : Tests sur le triangle
     // Création de trois points pour former un triangle
     Point P(0, 0);
     Point Q(3, 0);
@@ -45,7 +30,7 @@ int main() {
 
     // Test de la méthode 'center'
     Point center = t.center();
-    Point expectedCenter(1.0, 1.333333);  // Centre attendu : (1,1.33)
+    Point expectedCenter(1.0, 1.33);  // Centre attendu : (1,1.33)
     assert(fabs(center.x - expectedCenter.x) < 1e-6 && fabs(center.y - expectedCenter.y) < 1e-6);
     cout << "Test 'center' réussi!" << endl;
 
@@ -73,7 +58,6 @@ int main() {
     assert(fabs(t.C.x - 1.0) < 1e-6 && fabs(t.C.y - 1.0) < 1e-6);
     cout << "Test 'rotate' réussi!" << endl;
 
-    // Affichage final
     cout << "Tous les tests ont réussi!" << endl;
 
     return 0;
