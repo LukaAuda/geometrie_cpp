@@ -34,7 +34,7 @@ int main() {
  
      // Test aire
      double area = c.area();
-     double expectedArea = pi * 25.0; // π * r²
+     double expectedArea = pi * 25.0; 
      assert(fabs(area - expectedArea) < 1e-6);
      cout << "Test 'area' réussi!" << endl;
  
